@@ -1,0 +1,520 @@
+{
+  "info": {
+    "_postman_id": "c974fc81-6d20-4b93-81ce-3e522f655d67",
+    "name": "Chelmsford City 2023",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21904825"
+  },
+  "item": [
+    {
+      "name": "Hello",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Messages",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/messages",
+          "host": ["{{baseUrl}}"],
+          "path": ["messages"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - OK Stream of messages",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "537"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"219-AywggEq/yjBlNmxT+9yo/sF31eQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 19:01:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\",\n        \"replyId\": \"5f3ab7df-4061-4058-a808-7c5a351f530d\"\n    },\n    {\n        \"message\": \"Sorry, no replies as yet\",\n        \"id\": \"5f3ab7df-4061-4058-a808-7c5a351f530d\",\n        \"replyId\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\"\n    },\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"58e42e5c-1f86-4b5a-81ca-ecb7d376facd\",\n        \"replyId\": \"0434b4ce-17b9-4470-a0ba-542611770d0b\"\n    },\n    {\n        \"message\": \"messages in your message\",\n        \"id\": \"0434b4ce-17b9-4470-a0ba-542611770d0b\",\n        \"replyId\": \"58e42e5c-1f86-4b5a-81ca-ecb7d376facd\"\n    }\n]"
+        },
+        {
+          "name": "200 - OK pending message",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "356"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"164-d6VcoSjeE5KAZTO6ilkurZag4KE\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 20:11:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"272dd196-d368-4093-ad39-abfa51957e1b\",\n        \"replyId\": \"5fad05ef-44c8-4dea-90ad-dc2bdfb6f815\"\n    },\n    {\n        \"message\": \"messages in your message\",\n        \"id\": \"5fad05ef-44c8-4dea-90ad-dc2bdfb6f815\",\n        \"replyId\": \"272dd196-d368-4093-ad39-abfa51957e1b\"\n    },\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"a628cc77-29b1-4dd2-9f5c-a35cb77b259c\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get (are we waiting?)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/waiting",
+          "host": ["{{baseUrl}}"],
+          "path": ["waiting"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - OK Stream of messages",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "537"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"219-AywggEq/yjBlNmxT+9yo/sF31eQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 19:01:07 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\",\n        \"replyId\": \"5f3ab7df-4061-4058-a808-7c5a351f530d\"\n    },\n    {\n        \"message\": \"Sorry, no replies as yet\",\n        \"id\": \"5f3ab7df-4061-4058-a808-7c5a351f530d\",\n        \"replyId\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\"\n    },\n    {\n        \"message\": \"Yo dawg, I heard you like...\",\n        \"id\": \"58e42e5c-1f86-4b5a-81ca-ecb7d376facd\",\n        \"replyId\": \"0434b4ce-17b9-4470-a0ba-542611770d0b\"\n    },\n    {\n        \"message\": \"messages in your message\",\n        \"id\": \"0434b4ce-17b9-4470-a0ba-542611770d0b\",\n        \"replyId\": \"58e42e5c-1f86-4b5a-81ca-ecb7d376facd\"\n    }\n]"
+        },
+        {
+          "name": "404 - Waiting",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/waiting",
+              "host": ["{{baseUrl}}"],
+              "path": ["waiting"]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "30"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e-RhvMtg4kuEL1DJMrG5ZU3iOI0HU\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 20:13:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Nothing in queue\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Message By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/messages/:messageId",
+          "host": ["{{baseUrl}}"],
+          "path": ["messages", ":messageId"],
+          "variable": [
+            {
+              "key": "messageId",
+              "value": "87b54b91-2e1f-4b45-b633-46fe891280e4"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "404 - Not Found",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages/:messageId",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages", ":messageId"],
+              "variable": [
+                {
+                  "key": "messageId",
+                  "value": "e2e843ca-d721-411d-99fd-5c0d7d7e3404"
+                }
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "99"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"63-bIYppemyfKi154nwmR6RHvHEYeQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 18:58:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Cannot find message\",\n    \"details\": \"Using message id e2e843ca-d721-411d-99fd-5c0d7d7e3404\"\n}"
+        },
+        {
+          "name": "200 - OK Message without a reply",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages/:messageId",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages", ":messageId"],
+              "variable": [
+                {
+                  "key": "messageId",
+                  "value": "87b54b91-2e1f-4b45-b633-46fe891280e4"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "86"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"56-5AbnsjPGYGfJPep1IGByGAfxu1k\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 18:58:38 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Yo dawg, I heard you like...\",\n    \"id\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\"\n}"
+        },
+        {
+          "name": "200 - OK Message with reply",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/messages/:messageId",
+              "host": ["{{baseUrl}}"],
+              "path": ["messages", ":messageId"],
+              "variable": [
+                {
+                  "key": "messageId",
+                  "value": "87b54b91-2e1f-4b45-b633-46fe891280e4"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "135"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"87-Y1RanrNLbDzC0oyvPSMh1Bxs1Jg\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 18:59:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Yo dawg, I heard you like...\",\n    \"id\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\",\n    \"replyId\": \"5f3ab7df-4061-4058-a808-7c5a351f530d\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Send Message",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"message\": \"Yo dawg, I heard you like...\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/message",
+          "host": ["{{baseUrl}}"],
+          "path": ["message"]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - OK Yo Dawg setup",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"message\": \"Yo dawg, I heard you like...\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/message",
+              "host": ["{{baseUrl}}"],
+              "path": ["message"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "86"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"56-5AbnsjPGYGfJPep1IGByGAfxu1k\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 24 Apr 2023 18:58:10 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Yo dawg, I heard you like...\",\n    \"id\": \"87b54b91-2e1f-4b45-b633-46fe891280e4\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
